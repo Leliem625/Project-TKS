@@ -1,0 +1,14 @@
+# ModelSim
+sim/work/
+sim/transcript
+sim/*.wlf
+sim/*.vstf
+sim/modelsim.ini
+# Quartus
+db/
+incremental_db/
+output_files/
+# Python
+__pycache__/
+# macOS
+.DS_Store
