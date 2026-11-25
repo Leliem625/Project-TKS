@@ -6,7 +6,9 @@ Project cuối kỳ môn Thiết kế số và Vi xử lý.
 
 | Thư mục | Nội dung | Phụ trách |
 |---|---|---|
-| `rtl/` | CPU ARM Single-Cycle theo sách Harris & Harris (HDL Example 7.1–7.15) | TV1 |
+| `rtl/` | CPU ARM Single-Cycle theo sách Harris & Harris (HDL Example 7.1–7.15): `top`, `arm`, `imem`, `dmem` | TV1 |
+| `rtl/controller/` | `controller`, `decoder`, `condlogic` | TV1 |
+| `rtl/datapath/` | `datapath`, `regfile`, `alu`, `extend`, `building_blocks` | TV1 |
 | `tb/` | `tb_top`, `driver`, `monitor` | TV2 |
 | `tb/` | `reference_model`, `scoreboard` | TV3 |
 | `tb/coverage.sv`, `tests/`, `docs/` | Test Plan, test case, coverage | TV4 |

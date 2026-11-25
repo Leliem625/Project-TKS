@@ -5,10 +5,15 @@ if {[file exists work]} { vdel -lib work -all }
 vlib work
 
 # RTL (DUT)
-vlog -sv ../rtl/building_blocks.sv ../rtl/alu.sv ../rtl/extend.sv \
-         ../rtl/regfile.sv ../rtl/datapath.sv \
-         ../rtl/decoder.sv ../rtl/condlogic.sv ../rtl/controller.sv \
-         ../rtl/arm.sv ../rtl/imem.sv ../rtl/dmem.sv ../rtl/top.sv
+# datapath/
+vlog -sv ../rtl/datapath/building_blocks.sv ../rtl/datapath/alu.sv \
+         ../rtl/datapath/extend.sv ../rtl/datapath/regfile.sv \
+         ../rtl/datapath/datapath.sv
+# controller/
+vlog -sv ../rtl/controller/decoder.sv ../rtl/controller/condlogic.sv \
+         ../rtl/controller/controller.sv
+# top level + bo nho
+vlog -sv ../rtl/arm.sv ../rtl/imem.sv ../rtl/dmem.sv ../rtl/top.sv
 
 # Testbench - tb_pkg phai bien dich TRUOC
 vlog -sv ../tb/tb_pkg.sv
